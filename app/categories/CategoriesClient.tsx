@@ -172,8 +172,8 @@ export default function CategoriesClient() {
         {/* Modern Enhanced Pagination */}
         {totalPages > 1 && (
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 border border-gray-200/50 shadow-xl">
-            <div className="flex flex-col items-center justify-between gap-4 sm:gap-6 lg:gap-8">
-              {/* Page Info - Mobile Optimized */}
+            <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+              {/* Page Info - Centered */}
               <div className="text-center w-full">
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
                   Page {page} of {totalPages}
@@ -183,8 +183,8 @@ export default function CategoriesClient() {
                 </p>
               </div>
 
-              {/* Navigation Controls - Mobile Optimized */}
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 lg:gap-6 w-full">
+              {/* Navigation Controls - Centered */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6 w-full max-w-4xl mx-auto">
                 {/* Previous Button */}
                 <Button
                   variant="outline"
@@ -198,7 +198,7 @@ export default function CategoriesClient() {
                   <span className="sm:hidden">Prev</span>
                 </Button>
 
-                {/* Page Numbers - Mobile Optimized */}
+                {/* Page Numbers - Centered */}
                 <div className="flex items-center justify-center gap-1 sm:gap-2 lg:gap-3 flex-wrap">
                   {/* Show first page if not in range */}
                   {page > 3 && totalPages > 5 && (
@@ -267,7 +267,7 @@ export default function CategoriesClient() {
                 </Button>
               </div>
 
-              {/* Mobile Quick Navigation */}
+              {/* Mobile Quick Navigation - Centered */}
               <div className="flex items-center justify-center gap-2 sm:hidden w-full">
                 <Button
                   variant="outline"

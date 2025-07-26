@@ -63,8 +63,8 @@ export async function GET(req: NextRequest) {
     const countResult = await client.query(countQuery, params)
     const total = parseInt(countResult.rows[0]?.count || '0')
 
-    // Get paginated results with ordering by relevance
-    let orderBy = "b.rating DESC, b.reviews DESC"
+    // Get paginated results with proper sorting to ensure unique pagination
+    let orderBy = "b.data_id ASC" // Always include a unique identifier for consistent sorting
     const queryParams = [...params]
     
     if (searchQuery) {
@@ -77,10 +77,14 @@ export async function GET(req: NextRequest) {
           ELSE 4
         END,
         b.rating DESC, 
-        b.reviews DESC
+        b.reviews DESC,
+        b.data_id ASC
       `
       queryParams.push(`%${searchQuery}%`)
       paramIndex++
+    } else {
+      // Default sorting when no search query
+      orderBy = "b.rating DESC, b.reviews DESC, b.data_id ASC"
     }
 
     const sqlQuery = `SELECT * FROM businesses b ${where} ORDER BY ${orderBy} LIMIT $${paramIndex} OFFSET $${paramIndex + 1}`
