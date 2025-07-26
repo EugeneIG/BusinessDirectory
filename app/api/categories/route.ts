@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
     const total = parseInt(countResult.rows[0]?.count || '0')
 
     // Get paginated results
-    const query = `SELECT * FROM categories ${where} ORDER BY count DESC LIMIT $${params.length + 1} OFFSET $${params.length + 2}`
+    const query = `SELECT * FROM categories ${where} ORDER BY category_id ASC LIMIT $${params.length + 1} OFFSET $${params.length + 2}`
     const queryParams = [...params, pageSize, offset]
     const result = await client.query(query, queryParams)
     const categories = result.rows
