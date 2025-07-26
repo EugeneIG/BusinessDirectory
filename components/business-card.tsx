@@ -84,7 +84,7 @@ export function BusinessCard({ business }: BusinessCardProps) {
             {/* Title and rating */}
             <div className="flex items-start justify-between flex-shrink-0">
               <div className="flex-1 min-w-0">
-                <h3 className="font-bold text-lg sm:text-xl text-gray-900 group-hover:text-primary transition-colors duration-300 mb-1 sm:mb-2 line-clamp-2 h-12 sm:h-14 flex items-center">
+                <h3 className="font-bold text-lg sm:text-xl text-gray-900 group-hover:text-primary transition-colors duration-300 mb-1 sm:mb-2 line-clamp-2 leading-tight min-h-[2.5rem] sm:min-h-[3rem]">
                   {business.title}
                 </h3>
                 <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
