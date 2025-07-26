@@ -1,0 +1,18 @@
+main = ".open-next/worker.js"
+name = "BusinessDirectory"
+compatibility_date = "2025-05-29"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS" 
+
+[placement]
+mode = "smart"
+
+[env.production.vars]
+POSTGRES_HOST=""
+POSTGRES_PORT=""
+POSTGRES_DB=""
+POSTGRES_USER=""
+POSTGRES_PASSWORD=""
