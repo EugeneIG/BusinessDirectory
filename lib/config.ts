@@ -116,11 +116,7 @@ export const defaultConfig: BusinessConfig = {
       { href: "/businesses", label: "Browse" },
       { href: "/categories", label: "Categories" }
     ],
-    footer: [
-      { href: "/privacy", label: "Privacy Policy" },
-      { href: "/terms", label: "Terms of Service" },
-      { href: "/contact", label: "Contact" }
-    ]
+    footer: []
   },
 
   social: [
