@@ -87,7 +87,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200/50 mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-gray-600 text-xs sm:text-sm text-center sm:text-left">
-            © 2024 {business.name}. All rights reserved.
+            © {new Date().getFullYear()} {business.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
             {navigation.footer.map((item) => (
