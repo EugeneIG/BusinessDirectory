@@ -697,4 +697,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=chamuditha4/BusinessDirectory&type=Date)](https://www.star-history.com/#chamuditha4/BusinessDirectory&Date)
+
 **Made with ❤️ by the open-source community**
